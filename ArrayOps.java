@@ -48,23 +48,22 @@ public class ArrayOps {
             return false;
         }
 
-        int[] countArray1 = new int[1001]; // Assuming integers in the range 0 to 1000
-        int[] countArray2 = new int[1001];
+        int[] countArray = new int[1001]; // Assuming integers in the range 0 to 1000
 
         // Count the occurrences in array1
-        for (int i = 0; i < arr1.length; i++) {
-            int num = arr1[i];
-            countArr[num]++;
+        for (int i = 0; i < array1.length; i++) {
+            int num = array1[i];
+            countArray[num]++;
         }
 
         // Decrease according to the occurrences in array2
-        for (int i = 0; i < arr2.length; i++) {
+        for (int i = 0; i < array2.length; i++) {
             int num = arr2[i];
-            countArr[num]--;
+            countArray[num]--;
         }
 
         // Check if all counts are zero
-        for (int i = 0; i < countArr.length; i++) {
+        for (int i = 0; i < countArray.length; i++) {
             if (countArr[i] != 0) {
                 return false;
             }
