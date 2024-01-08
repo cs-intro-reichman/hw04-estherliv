@@ -58,13 +58,13 @@ public class ArrayOps {
 
         // Decrease according to the occurrences in array2
         for (int i = 0; i < array2.length; i++) {
-            int num = arr2[i];
+            int num = array2[i];
             countArray[num]--;
         }
 
         // Check if all counts are zero
         for (int i = 0; i < countArray.length; i++) {
-            if (countArr[i] != 0) {
+            if (countArray[i] != 0) {
                 return false;
             }
         }
