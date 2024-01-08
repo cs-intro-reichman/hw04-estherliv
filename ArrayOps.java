@@ -44,6 +44,10 @@ public class ArrayOps {
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
+        if (array1.length != array2.length) {
+            return false;
+        }
+        
         int[] countArray = new int[1001]; // Assuming integers in the range 0 to 1000
 
         // Count the occurrences in array1
