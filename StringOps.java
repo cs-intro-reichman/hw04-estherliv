@@ -34,6 +34,7 @@ public class StringOps {
             if (vowels.indexOf(currentChar) != -1) {
                 str += (char) (currentChar - 'a' + 'A');
             } else {
+                // #feedback - if it's already low, no need to change anything.
                 str += (char) (currentChar + 'a' - 'A');
             }
         }
@@ -58,6 +59,7 @@ public class StringOps {
                 if (end < string.length()) {
                     while (end < string.length() && string.charAt(end) != ' ') {
                         end++;
+                        // #feedback - no need to check this since you already check it in the while loop.
                         if (end == string.length()) {
                             break;
                         }
@@ -70,6 +72,8 @@ public class StringOps {
                         newStr += capFirst(string.substring(i, end));
                     }
 
+                    // #feedback - it can be sometimes confusing to update i not in the for statement. Consider using while loops in these cases.
+                    // Also, in this case you can have a single loop that iterates on all letters.
                     i = end - 1; // Adjusting the index to the end of the current word
                 }
             }
