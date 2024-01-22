@@ -5,6 +5,7 @@ public class ArrayOps {
     
     public static int findMissingInt (int [] array) {
         int n = array.length + 1;
+        // #feedback - you can iterate only once and calcualte both sums.
         int expectedSum = 0;
         for (int i = 0; i < n; i++) {
             expectedSum += i;
@@ -12,6 +13,7 @@ public class ArrayOps {
         
         int actualSum = 0;
         for (int i = 0; i < array.length; i++) {
+            // #feedback - this assignment to the variable num is not needed, you can do - "actualSum += array[i]"
             int num = array[i];
             actualSum += num;
         }
@@ -44,10 +46,12 @@ public class ArrayOps {
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
+        // #feedback - both arrays don't have to be the same length.
         if (array1.length != array2.length) {
             return false;
         }
-        
+
+        // #feedback - there is no need to assume the range. You can just iterate on the arrays and keep a boolean variable to indicate if there is a number missing.
         int[] countArray = new int[1001]; // Assuming integers in the range 0 to 1000
 
         // Count the occurrences in array1
@@ -62,6 +66,7 @@ public class ArrayOps {
             countArray[num]--;
         }
 
+        // #feedback - the number of times a number is in one array doesn't have to be the same for the other. Only that the number exists in the other array.
         // Check if all counts are zero
         for (int i = 0; i < countArray.length; i++) {
             if (countArray[i] != 0) {
